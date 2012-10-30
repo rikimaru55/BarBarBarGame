@@ -121,6 +121,18 @@ label scene3Comp:
     ce "Ando algo ajetreado, pero si claro, podemos hablar."
     me "Queria pedir tu opinion sobre un tema algo sensible."
     ce "Ok, que podria ser?"
+    me "Que opinas de Alaric como miembro del equipo?"
+    ce "Ya que me esta pidiendo mi opinion.. Aunque Alaric es afable y diligente, sus capacidades de comunicacion dejan mucho que desear"
+    me "En que sentido?"
+    ce "No habla espanol y lo poco de ingles que habla apenas se le entiende. Claro mi ingles no es tan bueno de todas maneras..."
+    ce "Pero creo que si vas a venir a trabajar a otro pais minimo deberias conocer algo del lenguaje local y dominar algun lenguaje adicional."
+    me "Hmmm, crees que la presencia de Alaric sea negativa para el equipo? Incluso tomando en cuenta sus habilidades tecnicas?"
+    ce "Por supuesto! Como se espera que trabaje con alguien con el que no me puedo comunicar!"
+    ce "Y sus habilidades tecnicas no sirven de nada si no entiendo lo que hace."
+    ce "No entiendo porque no pudieron contratar a alguien local o un consultor que dominara el idioma!"
+    ce "Aqui hay excelentes consultores que podrian hacer lo mismo que el hace."
+    me "Puede que tengas razon, te agradezco tu candidez."
+    ce "Si... Si...No hay problema."
     hide companero
     with dissolve
     jump scene3Choice

@@ -23,11 +23,11 @@ init -1 python hide:
     ## This controls the title of the window, when Ren'Py is
     ## running in a window.
 
-    config.window_title = u"A Ren'Py Game"
+    config.window_title = u"BarBarBar"
 
     # These control the name and version of the game, that are reported
     # with tracebacks and other debugging logs.
-    config.name = "A Ren'Py Game"
+    config.name = "BarBarBar"
     config.version = "0.0"
 
     #########################################
@@ -40,44 +40,44 @@ init -1 python hide:
     ## The theme function takes a number of parameters that can
     ## customize the color scheme.
 
-    theme.austen(
-        ## Theme: Austen
-        ## Color scheme: Winter Mint
+    theme.threeD(
+        ## Theme: 3D
+        ## Color scheme: Tree Frog
                                     
         ## The color of an idle widget face.
-        widget = "#7AA27B",
+        widget = "#1c140d",
 
         ## The color of a focused widget face.
-        widget_hover = "#A3C7A3",
+        widget_hover = "#86827e",
 
         ## The color of the text in a widget.
-        widget_text = "#CDE0CE",
+        widget_text = "#cbe86b",
 
         ## The color of the text in a selected widget. (For
         ## example, the current value of a preference.)
-        widget_selected = "#ffffff",
+        widget_selected = "#f2e9e1",
 
         ## The color of a disabled widget face. 
-        disabled = "#426143",
+        disabled = "#ffffff",
 
         ## The color of disabled widget text.
-        disabled_text = "#819981",
+        disabled_text = "#1c140d",
 
         ## The color of informational labels.
-        label = "#ffffff",
+        label = "#1c140d",
 
         ## The color of a frame containing widgets.
-        frame = "#245536",
+        frame = "#cbe86b",
 
         ## The background of the main menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        mm_root = "#e5f1e5",
+        mm_root = "#ffffff",
 
         ## The background of the game menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        gm_root = "#e5f1e5",
+        gm_root = "#ffffff",
 
         ## If this is True, the in-game window is rounded. If False,
         ## the in-game window is square.
@@ -264,4 +264,69 @@ init -1 python hide:
     #########################################
     ## More customizations can go here.
     
+    
+
+                         
+## This section contains information about how to build your project into 
+## distribution files.
+init python:
+    
+    ## The name that's used for directories and archive files. For example, if
+    ## this is 'mygame-1.0', the windows distribution will be in the
+    ## directory 'mygame-1.0-win', in the 'mygame-1.0-win.zip' file.
+    build.directory_name = "BarBarBarGame-1.0"
+    
+    ## The name that's uses for executables - the program that users will run
+    ## to start the game. For example, if this is 'mygame', then on Windows,
+    ## users can click 'mygame.exe' to start the game.
+    build.executable_name = "BarBarBarGame"
+    
+    ## If True, Ren'Py will include update information into packages. This
+    ## allows the updater to run.
+    build.include_update = False
+    
+    ## File patterns:
+    ## 
+    ## The following functions take file patterns. File patterns are case-
+    ## insensitive, and matched against the path relative to the base
+    ## directory, with and without a leading /. If multiple patterns match,
+    ## the first is used.
+    ##    
+    ##
+    ## In a pattern:
+    ##
+    ## / 
+    ##     Is the directory separator.
+    ## *
+    ##     Matches all characters, except the directory separator.
+    ## **
+    ##     Matches all characters, including the directory separator.
+    ##
+    ## For example:
+    ##
+    ## *.txt
+    ##     Matches txt files in the base directory.
+    ## game/**.ogg
+    ##     Matches ogg files in the game directory or any of its subdirectories.
+    ## **.psd
+    ##    Matches psd files anywhere in the project.
+
+    ## Classify files as None to exclude them from the built distributions.
+
+    build.classify('**~', None)
+    build.classify('**.bak', None)
+    build.classify('**/.**', None)
+    build.classify('**/#**', None)
+    build.classify('**/thumbs.db', None)
+    
+    ## To archive files, classify them as 'archive'.
+    
+    # build.classify('game/**.png', 'archive')
+    # build.classify('game/**.jpg', 'archive')
+
+    ## Files matching documentation patterns are duplicated in a mac app
+    ## build, so they appear in both the app and the zip file.
+
+    build.documentation('*.html')
+    build.documentation('*.txt')
     
