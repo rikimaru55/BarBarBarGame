@@ -189,11 +189,11 @@ screen main_menu:
 
         has vbox
 
-        textbutton _("Start Game") action Start()
-        textbutton _("Load Game") action ShowMenu("load")
-        textbutton _("Preferences") action ShowMenu("preferences")
-        textbutton _("Help") action Help()
-        textbutton _("Quit") action Quit(confirm=False)
+        textbutton _("Empezar") action Start()
+        textbutton _("Cargar") action ShowMenu("load")
+        textbutton _("Preferencias") action ShowMenu("preferences")
+        textbutton _("Ayuda") action Help()
+        textbutton _("Salir") action Quit(confirm=False)
 
 init -2 python:
 

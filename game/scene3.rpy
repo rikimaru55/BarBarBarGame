@@ -14,7 +14,7 @@ define ce = Character('Miembro del equipo', color="#1EDBD6")
 # The scene starts here.
 label scene3Start:
     show bg myoffice
-    with dissolve
+    with fade
     "*En mi oficina*"
     #Sonido de puerta 
     "*Entra Alaric, tu consultor coreano*"
@@ -24,7 +24,7 @@ label scene3Start:
     me "Gracias Alaric, me parece bien el progreso."
     "Alaric hace una pequena reverencia y sale de la habitacion."
     hide alaric
-    with fade
+    with dissolve
     me "Wow, aunque cada dia entiendo un poco mas, de verdad me es dificil entender ese ingles que usa."
     me "Bueno, al menos en la empresa manejar un nivel basico de ingles es un requisito."
     me "Aunque pensandolo bien, he notado que a varios companeros del equipo les cuesta entender lo que Alaric dice,espero que no este afectando su desempeno."
@@ -43,9 +43,13 @@ label scene3Decision:
 
 menu:
     "La barrera del lenguaje es demasiado grande, debere pedir su transferencia":
+        "Le escribes una carta a tu supervisor pidiendo la transferencia de Alaric."
+        "Hoy ha sido un dia largo, ya es hora de irse."
         $ alaric_fired = True
         jump final
     "Alaric es un recurso demasiado valioso y estoy seguro que puedo encontrar una mejor solucion.":
+        "Decides escribir una carta a tu supervisor explicando el problema y proponiendo varias soluciones."
+        "Hoy ha sido un dia largo, ya es hora de irse."
         $ alaric_fired = False
         jump final
 
@@ -67,7 +71,7 @@ menu:
 label scene3Coord:
     show bg DirTecnicaScene
     show dirTecnica
-    with dissolve
+    with fade
     me "Hola, todo bien?"
     dt "Todo bien, estoy terminando mi informe"
     me "Oye, queria hacerte una pregunta."
@@ -88,7 +92,7 @@ label scene3Coord:
 label scene3RRHH:
     show bg RRHHScene
     show RRHH
-    with dissolve
+    with fade
     me "Perdona, tienes un momento?"
     rh "Por supuesto, dime"
     me "La gente te tiene mucha confianza y a veces te dicen cosas que no se atreven a decirle a sus supervisores."
